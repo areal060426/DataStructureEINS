@@ -6,9 +6,9 @@ class Info {
     private String course = "Bachelor of Science in Information Technology";
     private int yrlvl = 2;
     private String school = "University of Makati";
-    private String hobbies = "Playing online games, reading, and working out";
+    private String hobbies = "Playing online games, reading, video editing, and maybe working out";
     private String favorite = "I don't have a favorite programming language but I usually use Java for school works and personal projects.";
-    private String reason = "The reason why I wanted to learn Java is to learn new things and improve the language we've already been studying and to take it up to the next level";
+    private String reason = "The reason why I wanted to learn Java is to learn and improve the language i've already been studying and to take it up to the next level";
 
     public String getName() { return name; }
     public int getAge() { return age; }
@@ -27,8 +27,7 @@ public class Ramos {
         System.out.println("-----------------------------");
         System.out.println("Name: " + info.getName());
         System.out.println("Age: " + info.getAge());
-        System.out.println("Course: " + info.getCourse());
-        System.out.println("Year Level: " + info.getYearLevel());
+        System.out.println("Course: " + info.getCourse() + " (" + info.getYearLevel() + "nd Year)");
         System.out.println("School: " + info.getSchool());
         System.out.println("Hobbies: " + info.getHobbies());
         System.out.println("Favorite Language: " + info.getFavorite());
