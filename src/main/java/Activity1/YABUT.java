@@ -1,4 +1,3 @@
-package Activity1;
 
 public class YABUT{
     public static void main(String[] args) {
