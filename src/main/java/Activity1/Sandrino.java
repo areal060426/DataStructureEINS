@@ -2,7 +2,6 @@ package main;
 
 public class Sandrino {
     public static void main(String[] args) {
-        // You can change the text inside the quotation marks to your actual details
         System.out.println("Full Name: Ian Nathaniel Sandrino");
         System.out.println("Age: 19");
         System.out.println("Course and Year Level: BSIT, 2nd Year");
