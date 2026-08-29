@@ -3,12 +3,12 @@ package Activity1;
 class Info {
     private String name = "Al-Jumong M. Ramos";
     private int age = 19;
-    private String course = "Bachelor of Science in Information Technology";
+    private String course = "BSIT - DATA STRUCTURE";
     private int yrlvl = 2;
     private String school = "University of Makati";
-    private String hobbies = "Playing online games, reading, video editing, and maybe working out";
-    private String favorite = "I don't have a favorite programming language but I usually use Java for school works and personal projects.";
-    private String reason = "The reason why I wanted to learn Java is to learn and improve the language i've already been studying and to take it up to the next level";
+    private String hobbies = "Playing online games, video editing, and reading.";
+    private String favorite = "JAVA & PHP";
+    private String reason = "The reason why I wanted to learn Java is to learn and improve the language \ni've already been studying and to take it up to the next level";
 
     public String getName() { return name; }
     public int getAge() { return age; }
