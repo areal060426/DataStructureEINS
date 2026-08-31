@@ -2,7 +2,7 @@ package Activity2;
 
 import java.util.LinkedList;
 import java.util.Queue;
-//Problem: The queue should remove the first person who entered.
+// Problem: The queue should remove the first person who entered.
 /*
  * Group Members:
  * 
