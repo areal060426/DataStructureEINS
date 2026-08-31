@@ -2,7 +2,6 @@ package Activity1;
 
 public class Licudine {
     public static void main(String[] args) {
-       
         System.out.println("Name: James Yvan B. Licudine");
         System.out.println("Age: 19");
         System.out.println("Course and Year Level: BS Information Technology specialized in Network Security - 2nd Year");
