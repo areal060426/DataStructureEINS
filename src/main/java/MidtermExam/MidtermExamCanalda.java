@@ -81,7 +81,7 @@ public class MidtermExamCanalda {
                 failed++;
             }
 
-            System.out.printf("%-10s %-7d %s\n", names[i], grades[i], status);
+            System.out.printf("%s %d %s\n", names[i], grades[i], status);
 
             if (grades[i] > highest) {
                 highest = grades[i];
