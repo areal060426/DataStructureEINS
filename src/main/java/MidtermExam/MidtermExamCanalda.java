@@ -1,6 +1,6 @@
 package MidtermExam;
 import java.util.Scanner;
-
+//MidtermExam RafaeL Jr. Canalda
 public class MidtermExamCanalda {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -81,7 +81,7 @@ public class MidtermExamCanalda {
                 failed++;
             }
 
-            System.out.printf("%-10s %-7d %s\n", names[i], grades[i], status);
+            System.out.printf("%s %d %s\n", names[i], grades[i], status);
 
             if (grades[i] > highest) {
                 highest = grades[i];
