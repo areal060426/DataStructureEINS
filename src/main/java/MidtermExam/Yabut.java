@@ -29,7 +29,7 @@ public class Yabut {
 		}
 
 		// STEP 4 & 5: Display results AND Calculate statistics 
-		System.out.println("\n========== STUDENT RESULTS ==========\n");
+		System.out.println("\n====== STUDENT RESULTS =======\n");
 		
 		int highestGrade = studentGrades[0];
 		int lowestGrade = studentGrades[0];
