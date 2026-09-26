@@ -20,17 +20,17 @@ public class MidtermExamHamdain {
                 }
             } else {
                 System.out.println("Invalid input! Please enter a whole number only.");
-                scanner.next(); // Clear invalid token
+                scanner.next(); 
             }
         }
 
-        // 2 & 3. Create parallel arrays
+        
         String[] names = new String[numStudents];
         int[] grades = new int[numStudents];
 
-        // 4. Ask for names and grades with validation
+        
         for (int i = 0; i < numStudents; i++) {
-            // Name validation (cannot be blank, no numbers, no symbols)
+            
             while (true) {
                 System.out.print("\nStudent " + (i + 1) + " Name: ");
                 names[i] = scanner.nextLine().trim();
@@ -44,12 +44,12 @@ public class MidtermExamHamdain {
                 }
             }
             
-            // Grade validation (must be a number between 0 and 100)
+            
             while (true) {
                 System.out.print("Grade (0-100): ");
                 if (scanner.hasNextInt()) {
                     grades[i] = scanner.nextInt();
-                    scanner.nextLine(); // Clear newline buffer
+                    scanner.nextLine(); 
                     if (grades[i] >= 0 && grades[i] <= 100) {
                         break;
                     } else {
@@ -57,12 +57,12 @@ public class MidtermExamHamdain {
                     }
                 } else {
                     System.out.println("Invalid input! Please enter a numeric grade.");
-                    scanner.next(); // Clear invalid token
+                    scanner.next(); 
                 }
             }
         }
 
-        // 5. Display all students and results
+        
         System.out.println("\n========== STUDENT RESULTS ==========\n");
 
         int highest = grades[0];
@@ -95,7 +95,7 @@ public class MidtermExamHamdain {
 
         double average = (double) totalSum / numStudents;
 
-        // 6. Display summary statistics
+        
         System.out.println("\nHighest Grade: " + highest);
         System.out.println("Lowest Grade: " + lowest);
         System.out.printf("Average Grade: %.2f\n", average);
