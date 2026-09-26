@@ -1,6 +1,7 @@
 package MidtermExam;
 
 import java.util.Scanner;
+//MIDTERM EXAM IN DATA STRUCTURES AND ALGORITHM
 
 public class Yabut {
 
@@ -69,5 +70,6 @@ public class Yabut {
 		System.out.println("Failed Students: " + failedCount);
 
 		sc.close();
+
 	}
 }
