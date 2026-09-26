@@ -1,7 +1,7 @@
 package MidtermExam;
 
 import java.util.Scanner;
-//MIDTERM EXAM IN DATA STRUCTURES AND ALGORITHM
+//MIDTERM EXAM IN DATA STRUCTURES AND ALGORITHM...
 
 public class Yabut {
 
@@ -50,7 +50,7 @@ public class Yabut {
 				// Display student result
 			System.out.println(studentNames[i] + "\t\t" + studentGrades[i] + "\t\t" + status);
 			
-			// Calculate statistics in the SAME loop
+			// Calculate statistics 
 			if (studentGrades[i] > highestGrade) {
 				highestGrade = studentGrades[i];
 			}
