@@ -106,6 +106,29 @@ public class Group3 {
         employeeID[j] = tempID;
     }
 
+    public static void displaySalaryStatistics(double[] salary) {
+        double total = 0;
+        double highest = salary[0];
+        double lowest = salary[0];
+
+        for (int i = 0; i < salary.length; i++) {
+            total += salary[i];
+            if (salary[i] > highest) {
+                highest = salary[i];
+            }
+            if (salary[i] < lowest) {
+                lowest = salary[i];
+            }
+        }
+
+        double average = total / salary.length;
+
+        System.out.println("\n--- SALARY STATISTICS ---");
+        System.out.println("Total Salary Payout: ₱" + String.format("%.2f", total));
+        System.out.println("Average Salary: ₱" + String.format("%.2f", average));
+        System.out.println("Highest Salary: ₱" + String.format("%.2f", highest));
+        System.out.println("Lowest Salary: ₱" + String.format("%.2f", lowest));
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -124,6 +147,7 @@ public class Group3 {
             System.out.println("3. Sort by Salary - Lowest to Highest");
             System.out.println("4. Sort by Employee ID");
             System.out.println("5. Search Employee ID");
+            System.out.println("6. Display Salary Statistics"); // i forgor
             System.out.println("7. Exit");
             System.out.println("==============================");
             System.out.print("Enter your choice: ");
@@ -146,6 +170,9 @@ public class Group3 {
                     System.out.print("Enter Employee ID to search: ");
                     int idToFind = scanner.nextInt();
                     searchEmployeeID(idToFind, employeeID, employeeName, salary);
+                    break;
+                case 6:
+                    displaySalaryStatistics(salary);
                     break;
                 case 7:
                     System.out.println("Exiting system. Goodbye!");
