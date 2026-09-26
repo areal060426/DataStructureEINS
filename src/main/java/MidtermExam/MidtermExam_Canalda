@@ -1,4 +1,4 @@
-package MidtermExam
+package MidtermExam;
 import java.util.Scanner;
 
 public class StudentGrades {
