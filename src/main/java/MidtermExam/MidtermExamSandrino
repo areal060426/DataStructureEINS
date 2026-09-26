@@ -2,7 +2,7 @@ package MidtermExam;
 
 import java.util.Scanner;
 
-public class Sandrino {
+public class MidtermExamSandrino {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
