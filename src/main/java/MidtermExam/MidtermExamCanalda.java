@@ -1,6 +1,6 @@
 package MidtermExam;
 import java.util.Scanner;
-
+//MidtermExam RafaeL Jr. Canalda
 public class MidtermExamCanalda {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
