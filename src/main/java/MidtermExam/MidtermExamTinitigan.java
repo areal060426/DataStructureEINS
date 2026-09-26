@@ -1,3 +1,4 @@
+package MidtermExam;
 import java.util.Scanner;
 
 public class MidtermExamTinitigan {
