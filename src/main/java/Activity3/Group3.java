@@ -30,6 +30,8 @@ import java.util.Scanner;
 
 public class Group3 {
 
+
+    // Display all employees and their info
     public static void displayEmployees(String[] employeeName, int[] employeeID, double[] salary) {
         System.out.println("\n--- EMPLOYEE LIST ---");
         for (int i = 0; i < employeeName.length; i++) {
@@ -37,7 +39,7 @@ public class Group3 {
         }
     }
 
-    // Bubble Sorting
+    // Bubble Sorting - sorts employee by salary, high to lowe
     public static void highLowSortSal(double[] salary, String[] employeeName, int[] employeeID) {
         for (int i = 0; i < salary.length - 1; i++) {
             for (int j = 0; j < salary.length - 1 - i; j++) {
@@ -50,6 +52,7 @@ public class Group3 {
         displayEmployees(employeeName, employeeID, salary);
     }
 
+    // sorts employees by salary, low to high
     public static void lowHighSortSal(double[] salary, String[] employeeName, int[] employeeID) {
         for (int i = 0; i < salary.length - 1; i++) {
             for (int j = 0; j < salary.length - 1 - i; j++) {
@@ -62,6 +65,7 @@ public class Group3 {
         displayEmployees(employeeName, employeeID, salary);
     }
 
+    // sort employees by id num
     public static void sortByID(int[] employeeID, String[] employeeName, double[] salary) {
         for (int i = 0; i < employeeID.length - 1; i++) {
             for (int j = 0; j < employeeID.length - 1 - i; j++) {
@@ -74,7 +78,7 @@ public class Group3 {
         displayEmployees(employeeName, employeeID, salary);
     }
 
-    // 5. Search Employee ID
+    // looks for an employee by id and shows info
     public static void searchEmployeeID(int targetID, int[] employeeID, String[] employeeName, double[] salary) {
         boolean found = false;
 
@@ -92,6 +96,7 @@ public class Group3 {
         }
     }
 
+    // swap 2 employee info so data stays the same after sorting/swapping
     public static void swap(double[] salary, String[] employeeName, int[] employeeID, int i, int j) {
         double tempSalary = salary[i];
         salary[i] = salary[j];
@@ -106,6 +111,7 @@ public class Group3 {
         employeeID[j] = tempID;
     }
 
+    // calculates and display total, avg, high, and low salary
     public static void displaySalaryStatistics(double[] salary) {
         double total = 0;
         double highest = salary[0];
@@ -132,9 +138,48 @@ public class Group3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String[] employeeName = {"Ramos", "Dario", "Santos", "Balagtas", "Tinitigan"};
-        int[] employeeID = {5, 2, 4, 1, 3};
-        double[] salary = {50000.60, 62000.69, 95000.25, 10000.25, 50000.75};
+        // ask how many to register
+        int numEmployees;
+        do {
+            System.out.print("Enter number of employees: ");
+            numEmployees = scanner.nextInt();
+            scanner.nextLine();
+
+            if (numEmployees <= 0) {
+                System.out.println("Invalid input. Please enter a number greater than 0.\n");
+            }
+        } while (numEmployees <= 0);
+
+        // initialize array
+        String[] employeeName = new String[numEmployees];
+        int[] employeeID = new int[numEmployees];
+        double[] salary = new double[numEmployees];
+
+        // loop to gather info for each employee
+        System.out.println("\n--- ENTER EMPLO   YEE DETAILS ---");
+        for (int i = 0; i < numEmployees; i++) {
+            System.out.println("Employee " + (i + 1) + ":");
+
+            System.out.print("Name: ");
+            employeeName[i] = scanner.nextLine();
+
+            // auto assign ID
+            employeeID[i] = 1 + i;
+            System.out.println("ID: " + employeeID[i]);
+
+            // prevents negative salaries
+            do {
+                System.out.print("Salary: ");
+                salary[i] = scanner.nextDouble();
+                scanner.nextLine();
+
+                if (salary[i] < 0) {
+                    System.out.println("Invalid amount. Salary cannot be negative.");
+                }
+            } while (salary[i] < 0);
+
+            System.out.println();
+        }
 
         int choice;
 
