@@ -6,21 +6,35 @@ INPUT-PROCESS-OUTPUT (IPO) SYSTEM CHART SUMMARY
 ================================================================================
 Feature / Option      | Input                  | Process                                      | Output
 ----------------------+------------------------+----------------------------------------------+----------------------------------
+<<<<<<< Updated upstream
 0. Null Array Guard   | Choice choice          | Validate original != null for choices 2-10   | Error prompt if array is null
+=======
+0. Null Array Guard   | Choice choice          | Validate original != null for choices 2-10    | Error prompt if array is null
+>>>>>>> Stashed changes
 1. Enter Array        | size, N int elements   | Allocate memory; populate original & working | Success confirmation message
 2. Display Original   | Choice 2               | Traversal loop across original array         | Print space-separated elements
 3. Bubble Sort        | Choice 3               | Clone original; pairwise adjacent swaps      | Print sorted working array
 4. Selection Sort     | Choice 4               | Clone original; swap min elements to front   | Print sorted working array
 5. Insertion Sort     | Choice 5               | Clone original; shift larger key values right| Print sorted working array
+<<<<<<< Updated upstream
 6. Search Number      | target int             | Linear Search (original), Binary (manual sort)| Index positions / match status
 7. Find Duplicates    | Choice 7               | Traversal with visited[] frequency tracker   | List of duplicates & counts
 8. Find Missing       | Choice 8               | Manual sort clone; scan adjacent gaps > 1    | List of missing integers
+=======
+6. Search Number      | target int             | Linear Search (original), Binary (sorted)    | Index positions / match status
+7. Find Duplicates    | Choice 7               | Traversal with visited[] frequency tracker   | List of duplicates & counts
+8. Find Missing       | Choice 8               | Sort clone; scan adjacent gap differences > 1| List of missing integers
+>>>>>>> Stashed changes
 9. Reverse Array      | Choice 9               | Clone original; in-place 2-pointer index swap| Print reversed working array
 10. Statistics        | Choice 10              | Calculate min/max/sum/avg/even/odd & median  | Complete statistical report
 11. Exit              | Choice 11              | Terminate do-while loop condition            | Goodbye message
 ================================================================================
 */
 
+<<<<<<< Updated upstream
+=======
+import java.util.Arrays;
+>>>>>>> Stashed changes
 import java.util.Scanner;
 
 public class Group5 {
@@ -66,6 +80,12 @@ public class Group5 {
 
             /*
              * IPO - SYSTEM NULL GUARD
+<<<<<<< Updated upstream
+=======
+             * Input  : User menu choice (int)
+             * Process: Evaluates if choice is between 2 and 10 while original array is uninitialized.
+             * Output : Error message prompting array entry if original == null.
+>>>>>>> Stashed changes
              */
             if (choice >= 2 && choice <= 10 && original == null) {
                 System.out.println("Please enter an array first.");
@@ -75,6 +95,16 @@ public class Group5 {
             switch (choice) {
 
                 case 1:
+<<<<<<< Updated upstream
+=======
+                    /*
+                     * IPO - OPTION 1: ENTER ARRAY
+                     * Input  : Array size (int), N array elements (int[])
+                     * Process: Instantiates original and working arrays of given size;
+                     *          populates elements into both arrays simultaneously.
+                     * Output : Confirmation message.
+                     */
+>>>>>>> Stashed changes
                     System.out.print("Array Size: ");
                     while (!scanner.hasNextInt()) {
                         System.out.println("Invalid size! Enter an integer.");
@@ -88,11 +118,14 @@ public class Group5 {
 
                     for (int i = 0; i < size; i++) {
                         System.out.print("Number " + (i + 1) + ": ");
+<<<<<<< Updated upstream
                         while (!scanner.hasNextInt()) {
                             System.out.println("Invalid integer entry!");
                             scanner.next();
                             System.out.print("Number " + (i + 1) + ": ");
                         }
+=======
+>>>>>>> Stashed changes
                         original[i] = scanner.nextInt();
                         working[i] = original[i];
                     }
@@ -100,11 +133,30 @@ public class Group5 {
                     break;
 
                 case 2:
+<<<<<<< Updated upstream
+=======
+                    /*
+                     * IPO - OPTION 2: DISPLAY ORIGINAL ARRAY
+                     * Input  : Menu selection 2
+                     * Process: Iterates through the original array using a for-each loop.
+                     * Output : Printed list of original array elements.
+                     */
+>>>>>>> Stashed changes
                     System.out.print("Original Array: ");
                     displayArray(original);
                     break;
 
                 case 3:
+<<<<<<< Updated upstream
+=======
+                    /*
+                     * IPO - OPTION 3: BUBBLE SORT
+                     * Input  : Menu selection 3
+                     * Process: Clones original to working. Uses nested loops to compare adjacent 
+                     *          elements (working[j] > working[j+1]) and swap them until sorted.
+                     * Output : Display sorted working array.
+                     */
+>>>>>>> Stashed changes
                     working = original.clone();
                     for (int i = 0; i < working.length - 1; i++) {
                         for (int j = 0; j < working.length - 1 - i; j++) {
@@ -120,6 +172,16 @@ public class Group5 {
                     break;
 
                 case 4:
+<<<<<<< Updated upstream
+=======
+                    /*
+                     * IPO - OPTION 4: SELECTION SORT
+                     * Input  : Menu selection 4
+                     * Process: Clones original to working. Scans unsorted sub-array for the minimum 
+                     *          element index (minIdx) and swaps it to the current outer index.
+                     * Output : Display sorted working array.
+                     */
+>>>>>>> Stashed changes
                     working = original.clone();
                     for (int i = 0; i < working.length - 1; i++) {
                         int minIdx = i;
@@ -137,6 +199,16 @@ public class Group5 {
                     break;
 
                 case 5:
+<<<<<<< Updated upstream
+=======
+                    /*
+                     * IPO - OPTION 5: INSERTION SORT
+                     * Input  : Menu selection 5
+                     * Process: Clones original to working. Iterates from index 1, shifting preceding 
+                     *          elements greater than target key rightward before inserting key.
+                     * Output : Display sorted working array.
+                     */
+>>>>>>> Stashed changes
                     working = original.clone();
                     for (int i = 1; i < working.length; i++) {
                         int key = working[i];
@@ -152,12 +224,24 @@ public class Group5 {
                     break;
 
                 case 6:
+<<<<<<< Updated upstream
                     System.out.print("Enter target number to search: ");
                     while (!scanner.hasNextInt()) {
                         System.out.println("Invalid target number!");
                         scanner.next();
                         System.out.print("Enter target number to search: ");
                     }
+=======
+                    /*
+                     * IPO - OPTION 6: SEARCH NUMBER
+                     * Input  : Target integer to search
+                     * Process: 1. Performs Linear Search sequentially over original array.
+                     *          2. Clones and sorts working array; executes Binary Search with 
+                     *             low, high, and mid pointers.
+                     * Output : Target status and matching index positions for both search types.
+                     */
+                    System.out.print("Enter target number to search: ");
+>>>>>>> Stashed changes
                     int target = scanner.nextInt();
 
                     // 1. Linear Search
@@ -177,7 +261,11 @@ public class Group5 {
 
                     // 2. Binary Search
                     working = original.clone();
+<<<<<<< Updated upstream
                     manualSort(working);
+=======
+                    Arrays.sort(working);
+>>>>>>> Stashed changes
 
                     int low = 0, high = working.length - 1;
                     int binaryIdx = -1;
@@ -204,6 +292,16 @@ public class Group5 {
                     break;
 
                 case 7:
+<<<<<<< Updated upstream
+=======
+                    /*
+                     * IPO - OPTION 7: FIND DUPLICATES
+                     * Input  : Menu selection 7
+                     * Process: Initializes boolean[] visited array. Counts occurrence frequency 
+                     *          for unvisited numbers across original array elements.
+                     * Output : Formatted list of duplicate numbers and their counts.
+                     */
+>>>>>>> Stashed changes
                     boolean[] visited = new boolean[original.length];
                     boolean duplicateFound = false;
 
@@ -231,8 +329,20 @@ public class Group5 {
                     break;
 
                 case 8:
+<<<<<<< Updated upstream
                     working = original.clone();
                     manualSort(working);
+=======
+                    /*
+                     * IPO - OPTION 8: FIND MISSING NUMBER
+                     * Input  : Menu selection 8
+                     * Process: Clones and sorts working array. Scans adjacent elements for index 
+                     *          gaps where (working[i+1] - working[i] > 1).
+                     * Output : Numerical sequence range and list of missing values.
+                     */
+                    working = original.clone();
+                    Arrays.sort(working);
+>>>>>>> Stashed changes
 
                     boolean missingFound = false;
                     System.out.print("Missing Number(s) in range [" + working[0] + " to " + working[working.length - 1] + "]: ");
@@ -254,6 +364,16 @@ public class Group5 {
                     break;
 
                 case 9:
+<<<<<<< Updated upstream
+=======
+                    /*
+                     * IPO - OPTION 9: REVERSE ARRAY
+                     * Input  : Menu selection 9
+                     * Process: Clones original into working. Executes an in-place two-pointer swap 
+                     *          loop up to index (working.length / 2) without extra arrays.
+                     * Output : Display reversed working array.
+                     */
+>>>>>>> Stashed changes
                     working = original.clone();
                     for (int i = 0; i < working.length / 2; i++) {
                         int temp = working[i];
@@ -265,6 +385,17 @@ public class Group5 {
                     break;
 
                 case 10:
+<<<<<<< Updated upstream
+=======
+                    /*
+                     * IPO - OPTION 10: STATISTICS
+                     * Input  : Menu selection 10
+                     * Process: 1. Single-pass loop on original to compute min, max, sum, even/odd counts.
+                     *          2. Computes average = sum / length.
+                     *          3. Sorts clone to calculate median based on even/odd length rules.
+                     * Output : Summary table displaying min, max, sum, average, median, even/odd counts.
+                     */
+>>>>>>> Stashed changes
                     int min = original[0];
                     int max = original[0];
                     int sum = 0;
@@ -281,8 +412,14 @@ public class Group5 {
 
                     double average = (double) sum / original.length;
 
+<<<<<<< Updated upstream
                     working = original.clone();
                     manualSort(working);
+=======
+                    // Median Calculation
+                    working = original.clone();
+                    Arrays.sort(working);
+>>>>>>> Stashed changes
                     double median;
                     int n = working.length;
                     if (n % 2 == 0) {
@@ -302,6 +439,15 @@ public class Group5 {
                     break;
 
                 case 11:
+<<<<<<< Updated upstream
+=======
+                    /*
+                     * IPO - OPTION 11: EXIT
+                     * Input  : Menu selection 11
+                     * Process: Evaluates do-while condition (choice != 11) to false.
+                     * Output : Termination message.
+                     */
+>>>>>>> Stashed changes
                     System.out.println("Exiting Array Sorting Laboratory. Goodbye!");
                     break;
 
@@ -314,6 +460,7 @@ public class Group5 {
         scanner.close();
     }
 
+<<<<<<< Updated upstream
     private static void manualSort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int key = arr[i];
@@ -326,6 +473,14 @@ public class Group5 {
         }
     }
 
+=======
+    /*
+     * IPO - HELPER METHOD: displayArray
+     * Input  : int[] arr
+     * Process: Iterates and formats array elements.
+     * Output : Prints space-separated numbers to standard output.
+     */
+>>>>>>> Stashed changes
     private static void displayArray(int[] arr) {
         for (int number : arr) {
             System.out.print(number + " ");
