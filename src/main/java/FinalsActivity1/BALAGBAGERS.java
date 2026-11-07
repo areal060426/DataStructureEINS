@@ -37,9 +37,6 @@ public class BALAGBAGERS {
 //			67 found at sorted index 5
 //			Arrays are equal: false
 		
-		
-		
-
 		int[] original = {45, 12, 89, 33, 67, 21, 90, 54};
 
 		// 1. Display the original array using Arrays.toString()
