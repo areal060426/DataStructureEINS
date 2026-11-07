@@ -1,5 +1,17 @@
-package FinalsActivity1;
 
+/*
+		 * Group Name: BALAGBAGERS
+		 *  1. Ocampo, Ernie 
+		 *  2. Paja, Philip
+		 *  3. Viesca, Zairah Mae
+		 *  4. Villanueva, John Russell
+		 *  5. Hamdain, Redwann 
+		 *  6. Yabut, Renyer
+		 *  7. Utrera, Sean John Daniel
+		 *  * */
+
+
+package FinalsActivity1;		
 import java.util.Arrays;
 
 public class BALAGBAGERS {
@@ -25,16 +37,7 @@ public class BALAGBAGERS {
 //			67 found at sorted index 5
 //			Arrays are equal: false
 		
-		/*
-		 * Group Name: BALAGBAGERS
-		 *  1. Ocampo, Ernie 
-		 *  2. Paja, Philip
-		 *  3. Viesca, Zairah Mae
-		 *  4. Villanueva, John Russell
-		 *  5. Hamdain, Redwann 
-		 *  6. Yabut, Renyer
-		 *  7. Utrera, Sean John Daniel
-		 * */
+		
 		
 
 		int[] original = {45, 12, 89, 33, 67, 21, 90, 54};
@@ -68,6 +71,5 @@ public class BALAGBAGERS {
 
 		// 8. Print whether the original and sorted arrays are equal
 		System.out.println("Arrays are equal: " + Arrays.equals(original, sorted));
-
 	}
 }
