@@ -9,7 +9,7 @@ package FinalsActivity1;
 
 import java.util.Arrays;
 
-public class charityMatch {
+public class CharityMatch {
 
     public static void main(String[] args) {
         int[] original = {45, 12, 89, 33, 67, 21, 90, 54};
