@@ -24,8 +24,7 @@ public class Rules {
 //			Highest: 90
 //			67 found at sorted index 5
 //			Arrays are equal: false
-		
-		
+
 
 	}
 
