@@ -156,7 +156,7 @@ public class Group3 {
         double[] salary = new double[numEmployees];
 
         // loop to gather info for each employee
-        System.out.println("\n--- ENTER EMPLO   YEE DETAILS ---");
+        System.out.println("\n--- ENTER EMPLOYEE DETAILS ---");
         for (int i = 0; i < numEmployees; i++) {
             System.out.println("Employee " + (i + 1) + ":");
 
@@ -192,7 +192,7 @@ public class Group3 {
             System.out.println("3. Sort by Salary - Lowest to Highest");
             System.out.println("4. Sort by Employee ID");
             System.out.println("5. Search Employee ID");
-            System.out.println("6. Display Salary Statistics"); // i forgor
+            System.out.println("6. Display Salary Statistics");
             System.out.println("7. Exit");
             System.out.println("==============================");
             System.out.print("Enter your choice: ");
